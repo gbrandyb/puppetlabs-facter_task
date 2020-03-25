@@ -45,7 +45,7 @@ def get(fact)
   stdout
 end
 
-params = JSON.parse(STDIN.read)
+# params = JSON.parse(STDIN.read)
 # fact = params['fact']
 
 begin
