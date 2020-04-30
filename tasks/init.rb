@@ -37,8 +37,8 @@ def get(fact)
   # Fall back to PATH lookup if puppet-agent isn't installed
   facter = 'facter' unless File.exist?(facter)
 
-  # cmd = [facter, '-p', '--json']
-  cmd = [facter, '--json']
+  cmd = [facter, '-p', '--json']
+  #cmd = [facter, '--json']
   cmd << fact if fact
   stdout, stderr, status = Open3.capture3(*cmd)
   raise "Exit #{status.exitstatus} running #{cmd.join(' ')}: #{stderr}" if status != 0
